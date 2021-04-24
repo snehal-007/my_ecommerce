@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:my_shop/pages/products_details.dart';
 
 class Products extends StatefulWidget {
   @override
@@ -73,12 +74,12 @@ class Single_prod extends StatelessWidget {
         onTap: () {
           debugPrint("tapped");
 
-          // Navigator.pushReplacement(
-          //   context,
-          //   MaterialPageRoute(
-          //     builder: (context) => loadjson(),
-          //   ),
-          // );
+          Navigator.pushReplacement(
+            context,
+            MaterialPageRoute(
+              builder: (context) => Product_detail(),
+            ),
+          );
         },
         child: Material(
           color: Colors.cyan,
