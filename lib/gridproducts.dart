@@ -11,8 +11,8 @@ class _ProductsState extends State<Products> {
     {
       "name": "Shirt",
       "picture": "assets/images/snehhh.jpeg",
-      "old_price": 5000,
-      "price": 4999
+      "old_price": 8000,
+      "price": 6999
     },
     {
       "name": "T-Shirt",
@@ -23,8 +23,8 @@ class _ProductsState extends State<Products> {
     {
       "name": "Pant",
       "picture": "assets/images/snehhh.jpeg",
-      "old_price": 5000,
-      "price": 4999
+      "old_price": 4000,
+      "price": 6999
     }
   ];
   @override
@@ -80,26 +80,34 @@ class Single_prod extends StatelessWidget {
                   prod_detail_price: prod_price,
                 ))),
         child: Material(
-          color: Colors.cyan,
-          borderRadius: BorderRadius.circular(3.0),
+          color: Colors.white,
+          borderRadius: BorderRadius.circular(10.0),
           child: Container(
             child: Column(
               children: [
                 Padding(
-                  padding: EdgeInsets.all(2.0),
-                  child: ClipOval(
-                    child: Image.asset(
-                      prod_picture,
-                      height: 170.0,
-                    ),
+                  padding: EdgeInsets.all(3.0),
+                  child: Image.asset(
+                    prod_picture,
+                    height: 120.0,
                   ),
                 ),
-                Center(
+                Container(
                   child: Text(
                     prod_name,
                     style: TextStyle(
+                      fontSize: 20.7,
+                      color: Colors.black,
+                      fontWeight: FontWeight.w400,
+                    ),
+                  ),
+                ),
+                Container(
+                  child: Text(
+                    "${prod_price} Rs",
+                    style: TextStyle(
                       fontSize: 12.7,
-                      color: Colors.white,
+                      color: Colors.red,
                       fontWeight: FontWeight.w500,
                     ),
                   ),
