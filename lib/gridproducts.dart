@@ -71,16 +71,14 @@ class Single_prod extends StatelessWidget {
         horizontal: 1.9,
       ),
       child: InkWell(
-        onTap: () {
-          debugPrint("tapped");
-
-          Navigator.pushReplacement(
-            context,
-            MaterialPageRoute(
-              builder: (context) => Product_detail(),
-            ),
-          );
-        },
+        // we are passing the values of products details to product detail page
+        onTap: () => Navigator.of(context).push(MaterialPageRoute(
+            builder: (context) => Product_detail(
+                  prod_detail_name: prod_name,
+                  prod_detail_picture: prod_picture,
+                  prod_detail_old_price: prod_old_price,
+                  prod_detail_price: prod_price,
+                ))),
         child: Material(
           color: Colors.cyan,
           borderRadius: BorderRadius.circular(3.0),

@@ -31,7 +31,7 @@ class MyHomePage extends StatefulWidget {
 class _MyHomePageState extends State<MyHomePage> {
   Widget imagecarousel() {
     return Container(
-      height: 200.0,
+      height: 210.0,
       child: Carousel(
         boxFit: BoxFit.cover,
         images: [
