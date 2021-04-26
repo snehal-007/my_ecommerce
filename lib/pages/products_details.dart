@@ -77,7 +77,25 @@ class _Product_detailState extends State<Product_detail> {
             children: [
               Expanded(
                 child: MaterialButton(
-                  onPressed: () {},
+                  onPressed: () {
+                    showDialog(
+                      context: context,
+                      builder: (context) {
+                        return AlertDialog(
+                          title: Text("Size"),
+                          content: Text("Choose the Size"),
+                          actions: [
+                            MaterialButton(
+                              onPressed: () {
+                                Navigator.of(context).pop(context);
+                              },
+                              child: Text("Close"),
+                            )
+                          ],
+                        );
+                      },
+                    );
+                  },
                   color: Colors.white,
                   textColor: Colors.grey,
                   elevation: 0.5,
@@ -95,7 +113,25 @@ class _Product_detailState extends State<Product_detail> {
               ),
               Expanded(
                 child: MaterialButton(
-                  onPressed: () {},
+                  onPressed: () {
+                    showDialog(
+                      context: context,
+                      builder: (context) {
+                        return AlertDialog(
+                          title: Text("Color"),
+                          content: Text("Choose the Color"),
+                          actions: [
+                            MaterialButton(
+                              onPressed: () {
+                                Navigator.of(context).pop(context);
+                              },
+                              child: Text("Close"),
+                            )
+                          ],
+                        );
+                      },
+                    );
+                  },
                   color: Colors.white,
                   textColor: Colors.grey,
                   elevation: 0.5,
@@ -113,7 +149,25 @@ class _Product_detailState extends State<Product_detail> {
               ),
               Expanded(
                 child: MaterialButton(
-                  onPressed: () {},
+                  onPressed: () {
+                    showDialog(
+                      context: context,
+                      builder: (context) {
+                        return AlertDialog(
+                          title: Text("Qty"),
+                          content: Text("Choose the Qty"),
+                          actions: [
+                            MaterialButton(
+                              onPressed: () {
+                                Navigator.of(context).pop(context);
+                              },
+                              child: Text("Close"),
+                            )
+                          ],
+                        );
+                      },
+                    );
+                  },
                   color: Colors.white,
                   textColor: Colors.grey,
                   elevation: 0.5,
@@ -154,6 +208,60 @@ class _Product_detailState extends State<Product_detail> {
                     color: Colors.red,
                   ),
                   onPressed: null),
+            ],
+          ),
+
+          // descriptions
+          Divider(),
+          ListTile(
+            title: Text("Product details"),
+            subtitle: Text(
+                "In publishing and graphic design, Lorem ipsum is a placeholder text commonly used to demonstrate the visual form of a document or a typeface without relying on meaningful content. Lorem ipsum may be used as a placeholder before final copy is available."),
+          ),
+          Divider(),
+          Row(
+            children: [
+              Padding(
+                padding: EdgeInsets.fromLTRB(12.0, 5.0, 3.0, 5.0),
+                child: Text(
+                  "Product name",
+                  style: TextStyle(color: Colors.grey),
+                ),
+              ),
+              Padding(
+                padding: EdgeInsets.all(5.0),
+                child: Text("Poor Shirt "),
+              ),
+            ],
+          ),
+          Row(
+            children: [
+              Padding(
+                padding: EdgeInsets.fromLTRB(12.0, 5.0, 3.0, 5.0),
+                child: Text(
+                  "Product brand",
+                  style: TextStyle(color: Colors.grey),
+                ),
+              ),
+              Padding(
+                padding: EdgeInsets.all(5.0),
+                child: Text("Loomaar"),
+              ),
+            ],
+          ),
+          Row(
+            children: [
+              Padding(
+                padding: EdgeInsets.fromLTRB(12.0, 5.0, 3.0, 5.0),
+                child: Text(
+                  "Product condition",
+                  style: TextStyle(color: Colors.grey),
+                ),
+              ),
+              Padding(
+                padding: EdgeInsets.all(5.0),
+                child: Text("Cool "),
+              ),
             ],
           ),
         ],
