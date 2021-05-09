@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'pages/cart.dart';
 
 class MyDrawer extends StatefulWidget {
   @override
@@ -43,7 +44,10 @@ class _MyDrawerState extends State<MyDrawer> {
             ),
           ),
           InkWell(
-            onTap: () {},
+            onTap: () {
+              Navigator.push(
+                  context, MaterialPageRoute(builder: (context) => Cart()));
+            },
             child: ListTile(
               leading: Icon(Icons.shopping_basket),
               title: Text("My Orders"),

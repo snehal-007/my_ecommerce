@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'gridproducts.dart';
 import 'horizontalview.dart';
 import 'my_drawer.dart';
+import 'pages/cart.dart';
 
 void main() {
   runApp(MyApp());
@@ -67,7 +68,10 @@ class _MyHomePageState extends State<MyHomePage> {
                 Icons.shopping_cart,
                 color: Colors.white,
               ),
-              onPressed: () {}),
+              onPressed: () {
+                Navigator.push(
+                    context, MaterialPageRoute(builder: (context) => Cart()));
+              }),
         ],
       ),
       drawer: MyDrawer(),
